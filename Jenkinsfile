@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                clearWs()
+                //clearWs()
                 sh '''
                    ls -la
                    node --version
