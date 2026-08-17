@@ -3,6 +3,12 @@ pipeline {
 
     stages {
         stage("Build") {
+            steps {
+                echo 'Build !!!'
+            }
+        }
+
+        stage("Test") {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -11,17 +17,11 @@ pipeline {
             }
 
             steps {
-                echo 'Build !!!'
-            }
-        }
-
-        stage("Test") {
-            steps {
                 sh '''
                 echo "Start Test!!!"
                 ls -al
                 node --version
-                npm -version
+                npm --version
                 npm ci
                 npm run build
                 cd build 
