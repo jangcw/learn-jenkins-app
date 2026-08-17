@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             //image 'node:18-alpine'
-            image 'mcr.microsoft.com/playwright:v1.39.0-noble'
+            image 'mcr.microsoft.com/playwright:v1.62.0-noble'
             reuseNode true
         }
     }
