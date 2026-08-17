@@ -17,7 +17,7 @@ pipeline {
                    npm ci
                    npm run build
                    ls -la
-                   npm install -g serve
+                   npm install serve
                    serve -s build
                 '''
             }
